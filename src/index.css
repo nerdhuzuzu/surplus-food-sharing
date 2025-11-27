@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* your custom CSS fixes here */
+
+
+/* index.css - append at end */
+.leaflet-container {
+  z-index: 0; /* baseline for the map */
+}
+
+/* make leaflet controls appear above map but below header buttons */
+.leaflet-control {
+  z-index: 1000;
+}
+
+/* ensure our app header stays on top */
+.app-header, header {
+  z-index: 1100;
+  position: relative;
+}
